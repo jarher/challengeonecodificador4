@@ -102,8 +102,7 @@ const pasteText = async () => {
     .readText()
     .then(
       (clipText) => {
-        console.log(clipText)
-        document.getElementById("encryptText").value = clipText;
+        inputText.value = clipText;
         openModal("texto pegado");
       },
       () => {
