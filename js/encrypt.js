@@ -3,6 +3,7 @@ const outputText = document.getElementById("decryptText");
 const encryptButton = document.getElementById("encrypt");
 const decryptButton = document.getElementById("decrypt");
 const copyButton = document.getElementById("copy");
+const pasteButton = document.getElementById("paste");
 const modalButton = document.getElementById("modalButton");
 const timeOut = 200;
 // height adjustment
@@ -96,6 +97,20 @@ const copyText = async () => {
       }
     );
 };
+const pasteText = async () => {
+  navigator.clipboard
+    .readText()
+    .then(
+      (clipText) => {
+        console.log(clipText)
+        document.getElementById("encryptText").value = clipText;
+        openModal("texto pegado");
+      },
+      () => {
+        openModal("hubo un error, inténtelo de nuevo");
+      }
+    );
+}
 const changeVisibility = (value) => {
   const firstContent = document.querySelector(".first-content");
   const copyButton = document.getElementById("copy");
@@ -162,6 +177,9 @@ document.addEventListener("click", (event) => {
   }
   if (event.target.id === "copy") {
     copyText();
+  }
+  if(event.target.id === "paste"){
+    pasteText();
   }
   if (event.target.id === "modalButton") {
     closeModal();

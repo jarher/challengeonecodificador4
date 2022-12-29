@@ -179,7 +179,8 @@ button:focus {
 }
 
 #decrypt,
-#copy {
+#copy,
+#paste {
   border: 1px solid var(--dark-blue-300);
   color: var(--dark-blue-300);
 }
