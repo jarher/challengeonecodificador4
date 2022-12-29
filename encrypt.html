@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="modal-wrapper hide">
+        <div class="modal-card">
+            <p>mensaje</p>
+            <button id="modalButton">Aceptar</button>
+        </div>
+    </div>
+    <main>
+        <header>
+            <div class="banner">
+                <img class="banner" src="./img/Vector.png" alt="Alura logo">
+            </div>
+            <h1>Encriptador</h1>
+        </header>
+
+        <div class="container">
+            <div class="left">
+                <div class="top">
+                    <textarea name="encryptText" id="encryptText" placeholder="Ingrese el texto aquí" rows="2"
+                        cols="30"></textarea>
+                </div>
+                <div class="bottom">
+                    <div class="warn-message">
+                        <img class="alert-icon" src="./img/bi_exclamation-circle-fill.png" alt="">
+                        Solo letras minúsculas y sin acentos
+                    </div>
+                    <div class="buttons-wrapper">
+                        <button id="encrypt">Encriptar</button>
+                        <button id="decrypt">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <textarea class="hide" name="decryptText" id="decryptText" cols="30" rows="" readonly></textarea>
+                <div class="first-content">
+                    <div class="background-wrapper">
+                        <img src="./img/Muñeco.png" alt="muñeco de fondo">
+                    </div>
+                    <div class="text-wrapper">
+                        <div class="title">Ningún mensaje fue encontrado</div>
+                        <div class="text">Ingrese el texto que desee encriptar o desencriptar</div>
+                    </div>
+                </div>
+
+                <button class="hide" id="copy">Copiar</button>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="developer-data">
+            <div>
+                <p>Página realizada por:</p>
+                <img src="./img/author.jpg" alt="foto del autor">
+                <p><strong>Jeffer Andrés Rojas Herrera</strong></p>
+            </div>
+            <div>
+                <p>Estudiante de desarollo web en <strong>Alura</strong></p>
+                <img src="./img/Vector.png" alt="alura logo">
+            </div>
+        </div>
+
+    </footer>
+</body>
+<script src="./js/encrypt.js"></script>
+
+</html>
